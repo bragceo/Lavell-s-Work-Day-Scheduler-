@@ -26,3 +26,11 @@ $(function () {
   const $timeBlocks = $(".time-block");
   const $currentDay = $("#currentDay");
   const currentHour = dayjs().hour(); // Get the current hour in 24-hour format
+
+    // Initialize the page by setting the current date and checking for saved events
+    $currentDay.text(dayjs().format("dddd, MMMM D, YYYY"));
+
+    for (let i = 0; i < $timeBlocks.length; i++) {
+      // Get the hour value of the current time-block
+      const hour = $($timeBlocks[i]).data("time");
+  
