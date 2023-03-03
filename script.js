@@ -34,20 +34,28 @@ $(function () {
       // Get the hour value of the current time-block
       const hour = $($timeBlocks[i]).data("time");
 
-          // Apply the past, present, or future class to the time-block
-    if (hour < currentHour) {
-      $($timeBlocks[i]).addClass("past");
-    } else if (hour === currentHour) {
-      $($timeBlocks[i]).addClass("present");
-    } else {
-      $($timeBlocks[i]).addClass("future");
-    }
+    // Apply the past, present, or future class to the time-block
+  if (hour < currentHour) {
+    $($timeBlocks[i]).addClass("past");
+  } else if (hour === currentHour) {
+    $($timeBlocks[i]).addClass("present");
+  } else {
+    $($timeBlocks[i]).addClass("future");
+  }
 
     // Get the saved event for the current time-block from local storage and display it
-    const savedEvent = localStorage.getItem(`event-${i}`);
-    if (savedEvent) {
-      $($timeBlocks[i]).find("textarea").val(savedEvent);
-    }
+  const savedEvent = localStorage.getItem(`event-${i}`);
+  if (savedEvent) {
+    $($timeBlocks[i]).find("textarea").val(savedEvent);
   }
+}
+  // Add a click event listener to the save button to save user input in local storage
+  $(".saveBtn").on("click", function () {
+    const index = $(this).data("index");
+    const event = $(this).siblings(".description").val();
+
+    localStorage.setItem(`event-${index}`, event);
+  });
+});
 
   
