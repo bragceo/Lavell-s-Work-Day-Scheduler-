@@ -22,3 +22,7 @@
   // TODO: Add code to display the current date in the header of the page.
 // });
 
+$(function () {
+  const $timeBlocks = $(".time-block");
+  const $currentDay = $("#currentDay");
+  const currentHour = dayjs().hour(); // Get the current hour in 24-hour format
