@@ -33,4 +33,21 @@ $(function () {
     for (let i = 0; i < $timeBlocks.length; i++) {
       // Get the hour value of the current time-block
       const hour = $($timeBlocks[i]).data("time");
+
+          // Apply the past, present, or future class to the time-block
+    if (hour < currentHour) {
+      $($timeBlocks[i]).addClass("past");
+    } else if (hour === currentHour) {
+      $($timeBlocks[i]).addClass("present");
+    } else {
+      $($timeBlocks[i]).addClass("future");
+    }
+
+    // Get the saved event for the current time-block from local storage and display it
+    const savedEvent = localStorage.getItem(`event-${i}`);
+    if (savedEvent) {
+      $($timeBlocks[i]).find("textarea").val(savedEvent);
+    }
+  }
+
   
