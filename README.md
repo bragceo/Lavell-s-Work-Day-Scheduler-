@@ -2,7 +2,7 @@
 
 # Description
 
-The Work Day Calendar is a simple web application that allows users to create a schedule for their workday. The application displays the current date at the top of the page and provides time blocks for standard business hours. Each time block is color-coded to indicate whether it is in the past, present, or future.
+Lavell's Work Day Calendar is a simple web application that allows users to create a schedule for their workday. The application displays the current date at the top of the page and provides time blocks for standard business hours. Each time block is color-coded to indicate whether it is in the past, present, or future.
 
 Users can enter their events and save them using the "Save" button. The events are stored in local storage and persist even when the page is refreshed.
 This application is useful for people who need to keep track of their daily schedules and want a simple way to do so. With its intuitive interface and easy-to-use functionality, the Work Day Calendar provides a great solution for anyone who wants to stay organized and on top of their daily tasks.
@@ -79,6 +79,9 @@ The script retrieves the value of the corresponding textarea element using the j
 The script saves the value of event to local storage using the localStorage.setItem() method with a key of event-${index}.
 
 The saved events persist on page refresh because they are stored in local storage and are retrieved during the initialization of the calendar on page load.
+
+## Deployed Site
+
 
 
 
