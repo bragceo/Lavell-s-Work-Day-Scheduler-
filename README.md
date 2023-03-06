@@ -80,6 +80,15 @@ The script saves the value of event to local storage using the localStorage.setI
 
 The saved events persist on page refresh because they are stored in local storage and are retrieved during the initialization of the calendar on page load.
 
+## Example of Functionality
+
+
+https://user-images.githubusercontent.com/119948453/223169495-04abe8f1-66e2-406b-8c88-de1ed5568166.mov
+
+
+
+
+
 ## Deployed Site
 
 
